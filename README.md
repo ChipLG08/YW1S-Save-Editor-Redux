@@ -1,39 +1,46 @@
 # YW1M Save Editor Redux
 
-Una aplicación de Android que carga el archivo `main.bin` de Yo-kai Watch 1 Smartphone mediante Shizuku, permitiendo editar y guardar los datos de `game0.yw` a `game3.yw`.
+An Android application that loads the `main.bin` file from Yo-kai Watch 1 Smartphone using Shizuku, allowing you to edit and save the data from `game0.yw` to `game3.yw`.
 
-## Funcionalidades implementadas
+## Implemented Features
 
-- Portada a Kotlin de la lógica de cifrado y descifrado de `crypt.py` / `check.py`.
-- Selección de `game0.yw`, `game1.yw`, `game2.yw` o `game3.yw` dentro de `main.bin` para extraer la lista de Yo-kai.
-- Edición de estadísticas individuales y otros atributos mediante una interfaz de Compose.
-- Visualización de la lista de objetos y modificación de las cantidades existentes dentro de límites seguros.
-- Visualización en modo de solo lectura del Equipamiento, los Objetos Clave, el estado de la Expendekai y la Mansión del Viajero.
-- Creación automática de una copia de seguridad llamada `main.bin.bak` al guardar. El archivo temporal se valida antes de sustituir el original.
-- Soporte para Android 13 en adelante.
+- Support for Spanish, English, and Japanese languages.
+- Kotlin port of the encryption and decryption logic from `crypt.py` / `check.py`.
+- Selection of `game0.yw`, `game1.yw`, `game2.yw`, or `game3.yw` within `main.bin` to extract the Yo-kai list.
+- Save directory selection: `/Android/data/`, `/Android/media/`, and `(Custom)`.
+- Editing of individual stats and other attributes through a Compose interface.
+- Display of the item list and modification of existing quantities within safe limits.
+- Read-only display of Equipment, Key Items, the Expendekai status, and the Wayfarer Manor.
+- Automatic creation of a backup named `main.bin.bak` when saving. The temporary file is validated before replacing the original.
+- Support for Android 13 and later.
 
-## Archivo de destino (Cambiado respecto al repo original)
+## Target Files
 
-- `/data/user/<ID_del_usuario_actual>/Android/media/jp.co.level5.yws1/save/main.bin`
+- `/data/user/<current_user_ID>/Android/data/jp.co.level5.yws1/files/save/main.bin`
+- `/data/user/<current_user_ID>/Android/media/jp.co.level5.yws1/save/main.bin`
+- `/(Custom directory)/main.bin`
 
-Si no posees esta carpeta deberás crearla tú y meter dentro tu `main.bin`.
+The directory must contain a `main.bin` file.
 
-## Uso
+## Usage
 
-1. Inicia Shizuku tras haberlo configurado previamente.
-2. Abre la aplicación y concede los permisos de Shizuku cuando aparezca el diálogo correspondiente.
-3. Selecciona la partida que quieras editar, desde `game0` hasta `game3`.
-4. Edita los Yo-kai o los datos de la partida.
-5. Pulsa `Guardar` para aplicar los cambios a la partida seleccionada.
-6. En caso de que no hayas cambiado la ruta de la partida guardada de `/Android/data/jp.co.level5.yws1/files/save/main.bin` a `/Android/media/jp.co.level5.yws1/save/main.bin`, pega el `main.bin` resultante en `/Android/data/jp.co.level5.yws1/files/save/` para aplicar los cambios.
+1. Start Shizuku after completing its initial setup (required to access `/Android/media/` and `/Android/data/`).
+2. Open the application and grant Shizuku permissions when prompted.
+3. Choose the directory containing the `main.bin` file you want to edit.
+4. Select the save file you want to edit, from `game0` to `game3`.
+5. Edit the Yo-kai or save data.
+6. Press `Save` to apply the changes to the selected save file.
+7. If you did not edit the file directly from `/data/user/<current_user_ID>/Android/data/jp.co.level5.yws1/files/save/main.bin`, copy the modified `main.bin` to that location, or to `/data/user/<current_user_ID>/Android/media/jp.co.level5.yws1/save/main.bin` (only if you have changed the save path so that the game loads the save file from there).
 
-## Advertencias
+## Warnings
 
-- Shizuku en modo ADB (sin root) no puede acceder a los datos internos de otras aplicaciones, por lo que no es posible editar las partidas en este modo. Es por eso que se cambio la ruta respecto al repositorio original para que sea más fácil para usuarios sin root.
-- Antes de escribir los cambios, se crea automáticamente una copia de seguridad (`.bak`), pero utiliza la aplicación bajo tu propia responsabilidad.
-- Si encuentras algún bug que no tenga que ver con como está traducido algo, reportalo al creador original.
+- Shizuku running in ADB mode (without root access) can only access `/Android/media/`. It cannot access other applications' internal data, so accessing `/Android/data/` in this mode is not possible.
+- Root access and Shizuku are required to access `/Android/data/`.
+- If your `main.bin` file is stored in a directory other than the two listed above, no additional permissions are required.
+- A backup (`.bak`) is automatically created before writing any changes, but use the application at your own risk.
+- If you encounter any bugs, please report them to the original creator.
 
-## Licencia
+## License
 
-- El código de este proyecto se distribuye bajo la licencia MIT. Consulta el archivo `LICENSE` para obtener más información.
-- Para consultar la información sobre las licencias de los materiales de terceros incluidos en el proyecto, consulta `THIRD_PARTY_NOTICES.md`.
+- The code in this project is distributed under the MIT License. See the `LICENSE` file for more information.
+- For information about the licenses of third-party materials included in this project, see `THIRD_PARTY_NOTICES.md`.
