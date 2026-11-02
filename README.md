@@ -1,4 +1,4 @@
-# YW1M Save Editor Redux
+# YW1S Save Editor Redux
 
 An Android application that loads the `main.bin` file from Yo-kai Watch 1 Smartphone using Shizuku, allowing you to edit and save the data from `game0.yw` to `game3.yw`.
 
