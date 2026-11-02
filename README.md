@@ -8,7 +8,7 @@ An Android application that loads the `main.bin` file from Yo-kai Watch 1 Smartp
 
 ## Implemented Features
 
-- Support for Spanish, English, and Japanese languages.
+- Support for Spanish, English, and Japanese.
 - Kotlin port of the encryption and decryption logic from `crypt.py` / `check.py`.
 - Selection of `game0.yw`, `game1.yw`, `game2.yw`, or `game3.yw` within `main.bin` to extract the Yo-kai list.
 - Save directory selection: `/Android/data/`, `/Android/media/`, and `(Custom)`.
