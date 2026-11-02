@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./assets/img_01.png"/>
+    <img src="./assets/img_01.jpg"/>
 </div>
 
 # YW1S Save Editor Redux
