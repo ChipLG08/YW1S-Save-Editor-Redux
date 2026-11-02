@@ -38,7 +38,7 @@ The directory must contain a `main.bin` file.
 
 ## Warnings
 
-- Shizuku running in ADB mode (without root access) can only access `/Android/media/`. It cannot access other applications' internal data, so accessing `/Android/data/` in this mode is not possible.
+- Shizuku running in ADB mode (without root access) can only access `/Android/media/`. It cannot access other applications internal data, so accessing `/Android/data/` in this mode is not possible.
 - Root access and Shizuku are required to access `/Android/data/`.
 - If your `main.bin` file is stored in a directory other than the two listed above, no additional permissions are required.
 - A backup (`.bak`) is automatically created before writing any changes, but use the application at your own risk.
