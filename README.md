@@ -31,7 +31,7 @@ The directory must contain a `main.bin` file.
 1. Start Shizuku after completing its initial setup (required to access `/Android/media/` and `/Android/data/`).
 2. Open the application and grant Shizuku permissions when prompted.
 3. Choose the directory containing the `main.bin` file you want to edit.
-4. Select the save file you want to edit, from `game0` to `game3`.
+4. Select the save file you want to edit, from `game0.yw` to `game3.yw`.
 5. Edit the Yo-kai or save data.
 6. Press `Save` to apply the changes to the selected save file.
 7. If you did not edit the file directly from `/data/user/<current_user_ID>/Android/data/jp.co.level5.yws1/files/save/main.bin`, copy the modified `main.bin` to that location, or to `/data/user/<current_user_ID>/Android/media/jp.co.level5.yws1/save/main.bin` (only if you have changed the save path so that the game loads the save file from there).
